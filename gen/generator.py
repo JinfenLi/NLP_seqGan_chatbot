@@ -272,7 +272,7 @@ def decoder(gen_config):
 
             for query, answer, resp in zip(batch_source_encoder, batch_source_decoder, resps):
                 #answer][:-1]表示要舍弃最后一个单词，因为他是EOS标志
-                answer_str = " ".join([str(rev_vocab[an]) for an in answer]answer][:-1])
+                answer_str = " ".join([str(rev_vocab[an]) for an in answer[:-1])
                 disc_train_answer.write(answer_str)
                 disc_train_answer.write("\n")
 
